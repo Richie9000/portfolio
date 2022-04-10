@@ -1,10 +1,11 @@
+import React from "react";
+import ThreeScene from "./components/ThreeScene";
+
 
 
 function App() {
   return (
-    <div className="App">
-     HI
-    </div>
+    <ThreeScene />
   );
 }
 
