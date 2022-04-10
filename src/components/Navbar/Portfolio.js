@@ -1,14 +1,21 @@
-import React from 'react'
-import { useLoader } from "@react-three/fiber";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import React, { useRef } from "react";
+import { useGLTF } from "@react-three/drei";
 
-const Portfolio = () => {
-    const gltf = useLoader(GLTFLoader, "./models/portfolio.glb");
-    return (
-      <>
-        <primitive object={gltf.scene} scale={0.4} />
-      </>
-    );
+export default function Model(props) {
+  const group = useRef();
+  const { nodes, materials } = useGLTF("/portfolio.gltf");
+  return (
+    <group ref={group} {...props} dispose={null}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Text.geometry}
+        material={materials.Material}
+        position={[-0.07, -0.66, -1.06]}
+        rotation={[Math.PI / 2, 0, 0]}
+      />
+    </group>
+  );
 }
 
-export default Portfolio
+useGLTF.preload("/portfolio.gltf");
