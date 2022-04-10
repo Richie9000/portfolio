@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import Portfolio from './Navbar/Portfolio';
+import Portfolio from './Portfolio';
 
 
 
@@ -15,21 +15,10 @@ const ThreeScene = () => {
      <Canvas>
      <Suspense fallback={null}>
       <Portfolio  />
-    </Suspense>
-       <mesh position={[3,0,0]}>
-         <boxBufferGeometry args={[1,1,1]} />
-         <meshBasicMaterial color={"#ff0000"} />
-       </mesh>
-       <mesh position={[0,0,0]}>
-         <boxBufferGeometry args={[1,1,1]} />
-         <meshBasicMaterial color={"#ff00ff"} />
-       </mesh>
-       <mesh position={[-3,0,0]}>
-         <boxBufferGeometry args={[1,1,1]} />
-         <meshBasicMaterial color={"#ff00bb"} />
-       </mesh>
 
        <OrbitControls />
+    </Suspense>
+
      </Canvas>
     </div>
   )
