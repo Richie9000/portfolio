@@ -2,6 +2,7 @@ import React, { Suspense } from 'react'
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import Portfolio from './Portfolio';
+import About from './About';
 
 
 
@@ -16,6 +17,7 @@ const ThreeScene = () => {
      <Suspense fallback={null}>
        <ambientLight />
       <Portfolio  />
+      <About position={[5,0,0]} />
       <directionalLight intensity={2} position={[0,0,50]} />
 
        <OrbitControls />
