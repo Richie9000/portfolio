@@ -14,13 +14,13 @@ const ThreeScene = () => {
 
   return (
     <div className="Container" style={{ width:"100%", height:"100vh" } }>
-     <Canvas camera={{ fov: 70, position: [0,0,2]}}>
+     <Canvas camera={{ fov: 70, position: [0,0,10]}}>
      <Suspense fallback={null}>
-       <ambientLight />
+       <ambientLight intensity={1}/>
       <Portfolio  />
       <About position={[5,0,0]} />
       <Contact position={[-5,0,0]} />
-      <directionalLight intensity={2} position={[0,0,50]} />
+      <directionalLight intensity={1} position={[0,0,50]} color="blue" />
 
        <OrbitControls />
     </Suspense>
