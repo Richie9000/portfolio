@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import Portfolio from './Portfolio';
+import Portfolio from './PortfolioMesh';
 import About from './About';
 import Contact from './Contact';
 
