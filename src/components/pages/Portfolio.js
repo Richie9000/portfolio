@@ -1,14 +1,13 @@
 import React, { Suspense } from 'react'
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import Portfolio from './PortfolioMesh';
-import About from './About';
-import Contact from './Contact';
+import Earth2 from './Earth2';
 
 
 
 
-const ThreeScene = () => {
+
+const Portfolio = () => {
 
     
 
@@ -16,10 +15,8 @@ const ThreeScene = () => {
     <div className="Container" style={{ width:"100%", height:"100vh" } }>
      <Canvas camera={{ fov: 70, position: [0,0,10]}}>
      <Suspense fallback={null}>
-       <ambientLight intensity={1}/>
-      <Portfolio  />
-      <About position={[5,0,0]} />
-      <Contact position={[-5,0,0]} />
+       <ambientLight intensity={3}/>
+      <Earth2  />
       <directionalLight intensity={1} position={[0,0,50]} color="blue" />
 
        <OrbitControls />
@@ -30,4 +27,4 @@ const ThreeScene = () => {
   )
 }
 
-export default ThreeScene
+export default Portfolio
