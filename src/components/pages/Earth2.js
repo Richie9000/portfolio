@@ -11,10 +11,10 @@ import { useLoader } from '@react-three/fiber'
 export default function Earth2({ ...props }) {
   const group = useRef()
   const [colorMap] = useLoader(TextureLoader,[Earthday])
-  const { nodes, materials } = useGLTF('/earth2.gltf')
+  const { nodes } = useGLTF('/earth2.gltf')
   return (
-    <group ref={group} {...props} dispose={null}>
-      <mesh geometry={nodes.earth.geometry}  rotation={[3.09, 1.04, -2.65]} scale={10} >
+    <group ref={group} {...props} dispose={null}  >
+      <mesh geometry={nodes.earth.geometry}  rotation={[0, 0, 0]} scale={4} >
       <meshStandardMaterial map={colorMap} />
       </mesh>
     </group>
