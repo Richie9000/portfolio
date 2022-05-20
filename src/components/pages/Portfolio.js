@@ -2,11 +2,6 @@ import React, { Suspense } from 'react'
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import Earth2 from './Earth2';
-import Jet from './Jet';
-
-
-
-
 
 const Portfolio = () => {
 
@@ -18,7 +13,7 @@ const Portfolio = () => {
      <Suspense fallback={null}>
        <ambientLight intensity={3}/>
       <Earth2  />
-      <Jet />
+    
       <directionalLight intensity={1} position={[0,0,50]} color="blue" />
 
        <OrbitControls />
