@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import HomeMarkup from "./components/pages/Home/HomeMarkup";
 import Portfolio from "./components/pages/Earth/Portfolio";
 import ShoeMarkup from "./components/pages/Shoe/ShoeMarkup";
+import HouseMarkup from "./components/pages/House/HouseMarkup";
 
 
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<HomeMarkup />}/> 
         <Route path="/Portfolio" element={<Portfolio />}/>
         <Route path="/Model" element={<ShoeMarkup />} />
+        <Route path="/House" element={<HouseMarkup />} />
         
       </Routes>
       </BrowserRouter>
