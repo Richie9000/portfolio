@@ -1,43 +1,33 @@
-import { OrbitControls, Bounds, BakeShadows } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
-import React, { Suspense, useState } from 'react'
-import Home from './Home'
+import Stars from './Stars'
+import "./HomeMarkup.css"
 
-const HomeMarkup = () => {
-
-  return (
-   
-        <div className="Container" style={{ width:"100%", height:"100vh" } }>
-             <Canvas orthographic shadows dpr={[1, 2]} camera={{ position: [10, 10, 10], zoom: 10 }}>
-            <Suspense fallback={null}>
-            <ambientLight intensity={.3} />
-            <hemisphereLight intensity={0.125} color="#8040df" groundColor="red" />
-            <spotLight castShadow color="orange" intensity={2} position={[-50, 50, 40]} angle={0.25} penumbra={1} shadow-mapSize={[128, 128]} shadow-bias={0.00005} />
-            <directionalLight intensity={1} position={[0,0,50]} color="blue" />
-            <Bounds fit clip observe margin={1}>
-            <Home rotation={[0,Math.PI / -4, 0 ]} position={[-3,-1,0]} scale={.8} />
-        
-        </Bounds>
-        <BakeShadows />
-        <OrbitControls
-        makeDefault
-        minAzimuthAngle={0}
-        maxAzimuthAngle={Math.PI / 2}
-        minPolarAngle={Math.PI / 3}
-        maxPolarAngle={Math.PI / 3}
-        enableZoom={true}
-        enablePan={true}
-        zoomSpeed={0.3}
-      />
-       <gridHelper args={[1000, 200, '#151515', '#020202']} position={[0, -4, 0]} />
-            </Suspense>
-            </Canvas>
-
+function Overlay() {
+    return (
+      <div style={{ position: 'absolute', top: 0, left: 0, pointerEvents: 'none', width: '100%', height: '100%' }}>
+       
+        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate3d(-50%,-50%,0)' }}>
+          <h1 style={{ margin: 0, padding: 0, fontSize: '2.9em', fontWeight: 500, letterSpacing: '-0.05em' }}>Hi! I'm Ricardo
+Glad to see you!</h1>
+        <br />
+        <h1 style={{ margin: "10 px", padding: 0, fontSize: '1.2em', fontWeight: 500, letterSpacing: '-0.05em', lineHeight: "1.9em" }}>
+          I’m a software developer! I can help you build a product, feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hesitate to contact me. </h1>
         </div>
-        
- 
+        <div style={{ position: 'absolute', top: 40, left: 40, fontSize: '13px' }}>pretty bad —</div>
+        <div style={{ position: 'absolute', bottom: 40, right: 40, fontSize: '13px' }}>25/02/2022</div>
+      </div>
+    )
+  }
 
-  )
-}
+export default function HomeMarkup() {
+    return (
+        <div className="Container" style={{ width:"100%", height:"100vh" } }>
+            <Overlay />
+      <Canvas camera={{ position: [0, 0, 1] }}>
+        <Stars />
+      </Canvas>
+        </div>
+    )
+  }
 
-export default HomeMarkup
+  

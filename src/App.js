@@ -1,9 +1,8 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import About from "./components/pages/About";
 import HomeMarkup from "./components/pages/Home/HomeMarkup";
-import Portfolio from "./components/pages/Portfolio";
+import Portfolio from "./components/pages/Earth/Portfolio";
 import ShoeMarkup from "./components/pages/Shoe/ShoeMarkup";
 
 
