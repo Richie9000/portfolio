@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import Earth2 from './Earth2';
+import Watch from './Earth2';
 
 const Portfolio = () => {
 
@@ -12,7 +12,7 @@ const Portfolio = () => {
      <Canvas camera={{ fov: 70, position: [0,0,10]}}>
      <Suspense fallback={null}>
        <ambientLight intensity={3}/>
-      <Earth2  />
+      <Watch  />
     
       <directionalLight intensity={1} position={[0,0,50]} color="blue" />
 

@@ -5,6 +5,7 @@ import HomeMarkup from "./components/pages/Home/HomeMarkup";
 import Portfolio from "./components/pages/Earth/Portfolio";
 import ShoeMarkup from "./components/pages/Shoe/ShoeMarkup";
 import HouseMarkup from "./components/pages/House/HouseMarkup";
+import ContactForm from "./components/pages/Contact/ContactForm";
 
 
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/Portfolio" element={<Portfolio />}/>
         <Route path="/Model" element={<ShoeMarkup />} />
         <Route path="/House" element={<HouseMarkup />} />
+        <Route path="/Contact" element={<ContactForm />} />
         
       </Routes>
       </BrowserRouter>
