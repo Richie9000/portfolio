@@ -7,7 +7,7 @@ title: Tag Heuer Monaco X GULF Watch
 */
 
 import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import { useGLTF, Html } from '@react-three/drei'
 
 export default function Watch({ ...props }) {
   const group = useRef()
@@ -19,6 +19,11 @@ export default function Watch({ ...props }) {
           <group rotation={[-Math.PI / 2, 0, 0]}>
             <mesh geometry={nodes.Object005_glass_0.geometry} material={materials.glass} />
           </group>
+          <Html scale={100} rotation={[Math.PI / 9, 0, 0]} position={[400, 200, 250]} transform occlude>
+          <div className="annotation">
+            $ 9,500 <span style={{ fontSize: '1.5em' }}>🥲</span>
+          </div>
+        </Html>
           <group rotation={[-Math.PI / 2, 0, 0]}>
             <mesh geometry={nodes.Object006_watch_0.geometry} material={materials.watch} />
           </group>
