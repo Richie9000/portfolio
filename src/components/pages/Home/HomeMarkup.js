@@ -1,6 +1,9 @@
 import { Canvas } from '@react-three/fiber'
+import React, { useEffect } from 'react'
 import Stars from './Stars'
 import "./HomeMarkup.css"
+
+
 
 function Overlay() {
     return (
@@ -13,8 +16,7 @@ Glad to see you!</h1>
         <h1 style={{ margin: "10 px", padding: 0, fontSize: '1.2em', fontWeight: 500, letterSpacing: '-0.05em', lineHeight: "1.9em" }}>
           I’m a software developer! I can help you build a product, feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hesitate to contact me. </h1>
         </div>
-        <div style={{ position: 'absolute', top: 40, left: 40, fontSize: '13px' }}>pretty bad —</div>
-        <div style={{ position: 'absolute', bottom: 40, right: 40, fontSize: '13px' }}>25/02/2022</div>
+        
       </div>
     )
   }

@@ -22,7 +22,7 @@ const HouseMarkup = () => {
       <a href="https://housedecentraland.herokuapp.com?realm=localhost-stub&renderer-branch=master">3d World!</a>
       <div>
         (Loading the 3d world may take a few moments) If you wanna know more about Decentraland visit....
-      <a href="https://decentraland.org/">Decentraland</a>
+      <a href="https://decentraland.org/n|">Decentraland</a>
       </div>
     </footer>
     </div>
