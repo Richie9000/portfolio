@@ -25,7 +25,7 @@ export default function HomeMarkup() {
     return (
         <div className="Container" style={{ width:"100%", height:"100vh" } }>
             <Overlay />
-      <Canvas camera={{ position: [0, 0, 1] }}>
+      <Canvas style={{  position: 'absolute', top: 0, left: 0, pointerEvents: 'none', width: '100%', height: '100%'  } } camera={{ position: [0, 0, 1] }}>
         <Stars />
       </Canvas>
         </div>
