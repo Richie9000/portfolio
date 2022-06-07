@@ -22,7 +22,7 @@ const WatchMarkup = () => {
       rotation={[0, 0.3, 0]}
       polar={[-Math.PI / 3, Math.PI / 3]}
       azimuth={[-Math.PI / 1.4, Math.PI / 2]}>
-      <Watch rotation={[-Math.PI / 7, 0, 0]} position={[0, 0.25, 0]} scale={0.003} />
+      <Watch rotation={[-Math.PI / 7, 0, 0]} position={[0, 0.25, 0]} scale={0.0021} />
      
     </PresentationControls>
     <ContactShadows rotation-x={Math.PI / 2} position={[0, -1.4, 0]} opacity={0.75} width={10} height={10} blur={2.6} far={2} />

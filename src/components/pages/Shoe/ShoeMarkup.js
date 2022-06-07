@@ -13,7 +13,7 @@ const ShoeMarkup = () => {
     <div className="wrapper">
     <div className="card">
         <div className="product-canvas">
-            <Canvas>
+            <Canvas style={{ width: "35vw", backgroundColor:"white"}}>
             <Suspense fallback={null}>
             <ambientLight intensity={.7} />
             <spotLight intensity={.7} angle={.1} penumbra={1} position={[10,25,10]} castShadow />

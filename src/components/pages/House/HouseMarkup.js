@@ -6,7 +6,7 @@ import Mdvr from "./Mdvr"
 
 const HouseMarkup = () => {
   return (
-    <div div className="Container" style={{ width:"100%", height:"80vh" } }>
+    <div div className="Container" style={{ width:"100%", height:"74vh" } }>
         <Canvas camera={{ fov: 70, position: [ 28, 0, -20 ]}}>
      <Suspense fallback={null}>
        <ambientLight intensity={5}/>
@@ -17,7 +17,7 @@ const HouseMarkup = () => {
     </Suspense>
 
      </Canvas>
-    <footer style={{ margin: "10 px", padding: 0, fontSize: '1.2em', fontWeight: 500, letterSpacing: '-0.05em', lineHeight: "1.9em" }}>
+    <footer style={{ margin: "10 px", padding: "20px", fontSize: '1.2em', fontWeight: 500, letterSpacing: '-0.05em', lineHeight: "1.9em" }}>
       If you wanna see the live action of the scene, you can visit...
       <a style={{ margin: "10 px", padding: 0, fontSize: '1.2em', fontWeight: 500, letterSpacing: '-0.05em', lineHeight: "1.9em" }} href="https://housedecentraland.herokuapp.com?realm=localhost-stub&renderer-branch=master">3d World!</a>
       <div>
