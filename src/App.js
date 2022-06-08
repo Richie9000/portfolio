@@ -6,12 +6,14 @@ import ShoeMarkup from "./components/pages/Shoe/ShoeMarkup";
 import HouseMarkup from "./components/pages/House/HouseMarkup";
 import ContactMarkup from "./components/pages/Contact/ContactMarkup";
 import WatchMarkup from "./components/pages/Watch/WatchMarkup";
+import { BreakpointProvider } from "react-socks";
 
 
 
 
 function App() {
   return (
+    <BreakpointProvider>
     <div>
       <BrowserRouter>
         <Navbar /> 
@@ -25,6 +27,7 @@ function App() {
       </Routes>
       </BrowserRouter>
     </div>
+    </BreakpointProvider>
   );
 }
 
