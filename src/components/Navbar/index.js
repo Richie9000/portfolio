@@ -22,14 +22,16 @@ const Navbar = () => {
      
      return(
        <div ref={closed} className="containerS" style={{ top: 0, height: "100%", width: "100%", backgroundColor:"black", zIndex: "2", position: "absolute", opacity: "95%"}}>
-         <ul style={{margin: "15px"}}  >
-      <Link className="nav-list" to="/" style={{margin: "15px"}}  >Home</Link>
-      <Link className="nav-list" to="/watch" style={{  margin: "15px"}} >Watch</Link>
-      <Link className="nav-list" to="/model" style={{margin: "15px"}} >Shoe Model</Link>
-      <Link className="nav-list" to="/house" style={{margin: "15px"}} >3D House</Link>
-      <Link className="nav-list" to="/contact" style={{margin: "15px"}} >Contact</Link>
+         <ul className="list-group list-group-flush" style={{margin: "15px"}}  >
+      <Link className="list-group-item" to="/" style={{margin: "15px", backgroundColor: "Transparent"}}  >Home</Link>
+      <Link className="list-group-item" to="/watch" style={{  margin: "15px", backgroundColor: "Transparent"}} >Watch</Link>
+      <Link className="list-group-item" to="/model" style={{margin: "15px", backgroundColor: "Transparent"}} >Shoe Model</Link>
+      <Link className="list-group-item" to="/house" style={{margin: "15px", backgroundColor: "Transparent"}} >3D House</Link>
+      <Link className="list-group-item" to="/contact" style={{margin: "15px", backgroundColor: "Transparent"}} >Contact</Link>
          </ul>
-         <button  className="closebtn" onClick= {() => {setShowNav(false); CloseNav()}}  >&times;</button>
+         <button  className="closebtn" onClick= {() => {setShowNav(false); CloseNav()}} style={{   backgroundColor: "Transparent", backgroundRepeat:"no-repeat",
+        border: "none", cursor: "pointer", overflow: "hidden", color: "white", top: 0, position:"absolute", right: 2,
+        fontSize: "33px", margin:"15px" }} >&times;</button>
            
        </div>
      )
@@ -42,7 +44,7 @@ const Navbar = () => {
     <Breakpoint large up>
     <div className="navbar"  >
     <ul style={{margin: "15px"}}  >
-      <Link className="nav-list" to="/" style={{margin: "15px"}}  >Home</Link>
+      <Link className="nav-list" to="/" style={{margin: "15px", }}  >Home</Link>
       <Link className="nav-list" to="/watch" style={{  margin: "15px"}} >Watch</Link>
       <Link className="nav-list" to="/model" style={{margin: "15px"}} >Shoe Model</Link>
       <Link className="nav-list" to="/house" style={{margin: "15px"}} >3D House</Link>
