@@ -23,11 +23,11 @@ const Navbar = () => {
      return(
        <div ref={closed} className="containerS" style={{ top: 0, height: "100%", width: "100%", backgroundColor:"black", zIndex: "2", position: "absolute", opacity: "95%"}}>
          <ul className="list-group list-group-flush" style={{margin: "15px"}}  >
-      <Link className="list-group-item" to="/" style={{margin: "15px", backgroundColor: "Transparent", fontSize:"19px", color: "white", opacity: "25%"}}  >Home</Link>
-      <Link className="list-group-item" to="/watch" style={{  margin: "15px", backgroundColor: "Transparent", fontSize:"19px", color: "white", opacity: "25%"}} >Watch</Link>
-      <Link className="list-group-item" to="/model" style={{margin: "15px", backgroundColor: "Transparent", fontSize:"19px", color: "white", opacity: "25%"}} >Shoe Model</Link>
-      <Link className="list-group-item" to="/house" style={{margin: "15px", backgroundColor: "Transparent", fontSize:"19px", color: "white", opacity: "25%"}} >3D House</Link>
-      <Link className="list-group-item" to="/contact" style={{margin: "15px", backgroundColor: "Transparent", fontSize:"19px", color: "white", opacity: "25%"}} >Contact</Link>
+      <Link className="list-group-item" onClick= {() => { setShowNav(false); CloseNav()}} to="/" style={{margin: "15px", backgroundColor: "Transparent", fontSize:"19px", color: "white", opacity: "25%"}}  >Home</Link>
+      <Link className="list-group-item" to="/watch"  onClick= {() => {setShowNav(false); CloseNav()}} style={{  margin: "15px", backgroundColor: "Transparent", fontSize:"19px", color: "white", opacity: "25%"}} >Watch</Link>
+      <Link className="list-group-item" to="/model"  onClick= {() => {setShowNav(false); CloseNav()}} style={{margin: "15px", backgroundColor: "Transparent", fontSize:"19px", color: "white", opacity: "25%"}} >Shoe Model</Link>
+      <Link className="list-group-item" to="/house"  onClick= {() => {setShowNav(false); CloseNav()}} style={{margin: "15px", backgroundColor: "Transparent", fontSize:"19px", color: "white", opacity: "25%"}} >3D House</Link>
+      <Link className="list-group-item" to="/contact" onClick= {() => {setShowNav(false); CloseNav()}} style={{margin: "15px", backgroundColor: "Transparent", fontSize:"19px", color: "white", opacity: "25%"}} >Contact</Link>
          </ul>
          <button  className="closebtn" onClick= {() => {setShowNav(false); CloseNav()}} style={{   backgroundColor: "Transparent", backgroundRepeat:"no-repeat",
         border: "none", cursor: "pointer", overflow: "hidden", color: "white", top: 0, position:"absolute", right: 2,
