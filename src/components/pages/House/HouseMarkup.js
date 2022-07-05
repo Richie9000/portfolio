@@ -13,7 +13,7 @@ const HouseMarkup = () => {
     <div style={{display: "flex", justifyContent: "center", margin: "0 auto", alignItems: "center", textAlign:"center"}} >
         <h1 style={{margin:"20px", marginTop: "54px", fontSize:"24px"}}>NFT created for Decentraland Metaverse</h1>
     </div>
-    <div div className="Container" style={{ width:"100%", height:"74vh" } }>
+    <div div className="Container" style={{ width:"100%", height:"55vh" } }>
         <Canvas camera={{ fov: 70, position: [ 28, 0, -20 ]}}>
      <Suspense fallback={null}>
        <ambientLight intensity={5}/>
