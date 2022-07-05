@@ -13,11 +13,11 @@ const HouseMarkup = () => {
     <div style={{display: "flex", justifyContent: "center", margin: "0 auto", alignItems: "center", textAlign:"center"}} >
         <h1 style={{margin:"20px", marginTop: "54px", fontSize:"24px"}}>NFT created for Decentraland Metaverse</h1>
     </div>
-    <div div className="Container" style={{ width:"100%", height:"55vh" } }>
+    <div div className="Container" style={{ width:"100%", height:"70vh" } }>
         <Canvas camera={{ fov: 70, position: [ 28, 0, -20 ]}}>
      <Suspense fallback={null}>
-       <ambientLight intensity={5}/>
-       <spotLight position={[70, 41, 60]} intensity={10} angle={0.29} penumbra={1} shadow-mapSize={[512, 512]} castShadow />
+       <ambientLight intensity={10}/>
+       <spotLight position={[70, 41, 60]} intensity={19} angle={0.29} penumbra={1} shadow-mapSize={[512, 512]} castShadow />
        <Mvdr position={[15, -5, -5]} />
 
        <OrbitControls />
