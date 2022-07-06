@@ -1,8 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-   
-}
+
 
 .wrapper {
     min-height: 80vh;
@@ -30,3 +26,11 @@
 }
 
 .colors div {padding:8px;}
+
+.containerST {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+}

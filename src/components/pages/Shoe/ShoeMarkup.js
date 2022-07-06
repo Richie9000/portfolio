@@ -3,7 +3,7 @@ import { Canvas } from '@react-three/fiber'
 import React, { Suspense, useState } from 'react'
 import { Breakpoint } from 'react-socks'
 import Shoe from './Shoe'
-import "./Shoe.css"
+import styles from "./Shoe.module.css"
 
 const ShoeMarkup = () => {
 
@@ -14,7 +14,7 @@ const ShoeMarkup = () => {
     <div>
 
     <Breakpoint large up>
-    <div style={{display: "flex", justifyContent: "center", margin: "0 auto", alignItems: "center", textAlign:"center"}} >
+    <div className={styles.containerST}  >
         <h1 style={{margin:"5px", marginTop: "44px", fontSize:"25px"}}>Let your client customize your products!</h1>
     </div>
 
