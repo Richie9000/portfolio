@@ -20,14 +20,19 @@
 
 .containerHouse {
     width: 100%; 
-    height: 100%; 
+    height: 80vh; 
     margin: 10px; 
     overflow: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .canvasHouse {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
 }
 
 .footerL {
@@ -35,8 +40,13 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 18px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .linka{
       color: white;
+      -webkit-text-fill-color: white;
   }

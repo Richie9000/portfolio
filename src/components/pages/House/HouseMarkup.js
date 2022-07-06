@@ -8,14 +8,14 @@ import styles from "./HouseMarkup.module.css";
 const HouseMarkup = () => {
   return (
     <div className={styles.containerH}>
-      <Breakpoint large up>
+      <Breakpoint large up >
         <div className={styles.containerText}>
           <h1 className={styles.textT}>
             NFT created for Decentraland Metaverse
           </h1>
         </div>
         <div className={styles.containerHouse}>
-          <Canvas className={styles.canvasHouse}
+          <Canvas
             camera={{ fov: 70, position: [28, 0, -20] }}
             
           >
@@ -44,17 +44,10 @@ const HouseMarkup = () => {
               3d World!
             </a>
             <div>
-              (Loading the 3d world may take a few moments) If you wanna know
-              more about Decentraland visit....
+              (Loading the 3d world may take a few moments, only available on Desktop) If you wanna know
+              more about visit....
               <a
-                style={{
-                  margin: "10 px",
-                  padding: 0,
-                  fontSize: "1.2em",
-                  fontWeight: 500,
-                  letterSpacing: "-0.05em",
-                  lineHeight: "1.9em",
-                }}
+                className={styles.linka}
                 href="https://decentraland.org/"
               >
                 Decentraland
@@ -120,7 +113,7 @@ const HouseMarkup = () => {
             </a>
             <div>
               (Loading the 3d world may take a few moments) If you wanna know
-              more about Decentraland visit....
+              more about visit....
               <a
                 style={{
                   margin: "10 px",
