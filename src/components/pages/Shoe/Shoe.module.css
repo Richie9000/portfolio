@@ -1,7 +1,7 @@
 
 
 .wrapper {
-    min-height: 80vh;
+  
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -13,8 +13,8 @@
 .card {
     border-radius: 13px;
     box-shadow: 20px 40px 33px rgba(0,0,0,0.3);
-    padding: 6rem;
-    background-color:  #16094e;
+    padding: 2rem 4rem;
+    background-color:  #07092d;
 
 }
 
@@ -33,4 +33,15 @@
     margin: 0 auto;
     align-items: center;
     text-align: center;
+}
+
+.titleS {
+    margin: 20px 5px;
+    font-size: 25px;
+
+}
+
+.titleC {
+    margin: 10px;
+    font-size: 20px;
 }

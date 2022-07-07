@@ -9,7 +9,7 @@ export default function Shoe({ ...props }) {
   const { nodes, materials } = useGLTF('/shoe.gltf')
   return (
     <group ref={group} {...props} dispose={null} scale={3}>
-    <mesh geometry={nodes.shoe.geometry} material={materials.laces}     material-color={props.customColors.stripes} />
+    <mesh geometry={nodes.shoe.geometry} material={materials.laces}     material-color={props.customColors.laces} />
     <mesh geometry={nodes.shoe_1.geometry} material={materials.mesh}    material-color={props.customColors.mesh} />
     <mesh geometry={nodes.shoe_2.geometry} material={materials.caps}    material-color={props.customColors.sole}  />
     <mesh geometry={nodes.shoe_3.geometry} material={materials.inner}   material-color={props.customColors.sole} />

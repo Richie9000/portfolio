@@ -10,22 +10,24 @@ const ShoeMarkup = () => {
     const [mesh, setMesh] = useState("#ffffff")
     const [stripes, setStripes] = useState("#ffffff")
     const [sole, setSole] = useState("#ffffff")
+    const [laces, setLaces] = useState("#ffffff")
+
   return (
     <div>
 
     <Breakpoint large up>
     <div className={styles.containerST}  >
-        <h1 style={{margin:"5px", marginTop: "44px", fontSize:"25px"}}>Let your client customize your products!</h1>
+        <h1 className={styles.titleS} >Let your client customize your products!</h1>
     </div>
 
-      <div className="wrapper">
-      <div className="card">
+      <div className={styles.wrapper}>
+      <div className={styles.card}>
           <div >
-              <Canvas style={{ width: "35vw", height: "40vh",backgroundColor:"white"}}>
+              <Canvas style={{ width: "35vw", height: "40vh",backgroundColor:"white", borderRadius:"10px"}}>
               <Suspense fallback={null}>
               <ambientLight intensity={.7} />
               <spotLight intensity={.7} angle={.1} penumbra={1} position={[10,25,10]} castShadow />
-              <Shoe customColors={{mesh:mesh, stripes:stripes, sole:sole}}  />
+              <Shoe customColors={{mesh:mesh, stripes:stripes, sole:sole, laces:laces}}  />
               <directionalLight intensity={1} position={[0,0,50]} color="blue" />
   
               <OrbitControls />
@@ -34,8 +36,8 @@ const ShoeMarkup = () => {
               </Canvas>
   
           </div>
-          <h2>Color chooser</h2>
-          <div className='colors'>
+          <h1 className={styles.titleC}>Color chooser</h1>
+          <div className={styles.colors}>
                <div>
                   <input onChange={(e) => setMesh(e.target.value)} type="color" id="mesh" name="mesh"
                          value={mesh} />
@@ -51,6 +53,11 @@ const ShoeMarkup = () => {
                   <input onChange={(e)=>setSole(e.target.value)} type="color" id="sole" name="sole"
                           value={sole} />
                   <label for="sole">Sole</label>
+              </div>
+               <div>
+                  <input onChange={(e)=>setLaces(e.target.value)} type="color" id="laces" name="laces"
+                          value={laces} />
+                  <label for="sole">Laces</label>
               </div>
           </div>
       </div>
