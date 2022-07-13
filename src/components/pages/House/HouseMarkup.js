@@ -1,9 +1,10 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, PresentationControls } from "@react-three/drei";
 import Mvdr from "./Mvdr";
 import { Breakpoint } from "react-socks";
 import styles from "./HouseMarkup.module.css";
+import Ocean from "./Water";
 
 const HouseMarkup = () => {
   return (
@@ -16,10 +17,19 @@ const HouseMarkup = () => {
         </div>
         <div className={styles.containerHouse}>
           <Canvas
-            camera={{ fov: 70, position: [28, 0, -20] }}
-            
+            camera={{ fov: 70, position: [28, 20, -40] }}
+          
           >
             <Suspense fallback={null}>
+              <PresentationControls 
+              global
+              polar={[-.5, Math.PI / 15]} 
+              azimuth={[-Math.PI / 1.4, Math.PI / 2]}
+              config={{ mass: 2, tension: 500 }}
+              rotation={[0, 0.3, 0]}
+              >
+            
+
               <ambientLight intensity={10} />
               <spotLight
                 position={[70, 41, 60]}
@@ -29,12 +39,13 @@ const HouseMarkup = () => {
                 shadow-mapSize={[512, 512]}
                 castShadow
               />
-              <Mvdr position={[15, -5, -5]} />
-
-              <OrbitControls />
+              <Mvdr position={[15, -.5, -5]} />
+             
+              <Ocean />
+              
+              </PresentationControls>
             </Suspense>
           </Canvas>
-
           <footer className={styles.footerL}>
             If you wanna see the live action of the scene, you can visit...
             <a
@@ -83,7 +94,7 @@ const HouseMarkup = () => {
                 castShadow
               />
               <Mvdr position={[15, -5, -5]} />
-
+              <Ocean />
               <OrbitControls />
             </Suspense>
           </Canvas>

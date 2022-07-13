@@ -21,6 +21,7 @@
     "react-scripts": "5.0.0",
     "react-socks": "^2.2.0",
     "three": "^0.139.2",
+    "three-stdlib": "^2.12.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
