@@ -17,8 +17,8 @@ const HouseMarkup = () => {
         </div>
         <div className={styles.containerHouse}>
           <Canvas
-            camera={{ fov: 70, position: [28, 20, -40] }}
-          
+            camera={{ fov: 50, position: [30, 10, -30] }}
+            
           >
             <Suspense fallback={null}>
               <PresentationControls 
@@ -27,6 +27,7 @@ const HouseMarkup = () => {
               azimuth={[-Math.PI / 1.4, Math.PI / 2]}
               config={{ mass: 2, tension: 500 }}
               rotation={[0, 0.3, 0]}
+              snap={{ mass: 4, tension: 1500 }}
               >
             
 
@@ -94,7 +95,7 @@ const HouseMarkup = () => {
                 castShadow
               />
               <Mvdr position={[15, -5, -5]} />
-              <Ocean />
+           
               <OrbitControls />
             </Suspense>
           </Canvas>
