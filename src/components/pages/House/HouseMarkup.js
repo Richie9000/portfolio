@@ -1,73 +1,55 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, PresentationControls } from "@react-three/drei";
+import { OrbitControls, PresentationControls, Sky } from "@react-three/drei";
 import Mvdr from "./Mvdr";
 import { Breakpoint } from "react-socks";
-import styles from "./HouseMarkup.module.css";
 import Ocean from "./Water";
+import styles from "./HouseMarkup.module.css"
 
-const HouseMarkup = () => {
+
+ const HouseMarkup = () => {
   return (
-    <div className={styles.containerH}>
+    <div>
+      <div className={styles.container}>
       <Breakpoint large up >
-        <div className={styles.containerText}>
-          <h1 className={styles.textT}>
-            NFT created for Decentraland Metaverse
-          </h1>
-        </div>
-        <div className={styles.containerHouse}>
-          <Canvas
-            camera={{ fov: 50, position: [30, 10, -30] }}
-            
-          >
-            <Suspense fallback={null}>
-              <PresentationControls 
-              global
-              polar={[-.5, Math.PI / 15]} 
-              azimuth={[-Math.PI / 1.4, Math.PI / 2]}
-              config={{ mass: 2, tension: 500 }}
-              rotation={[0, 0.3, 0]}
-              snap={{ mass: 4, tension: 1500 }}
-              >
-            
+     
+     <Canvas
+      style={{ position: 'absolute', top: 0, left: 0, pointerEvents: 'none', width: '100%', height: '100%'  } }
+       camera={{ fov: 70, position: [30, 10, -30] }}
+       
+     >
+       <Suspense fallback={null}>
+         
+         <PresentationControls 
+         global
+         polar={[-.5, Math.PI / 15]} 
+         azimuth={[-Math.PI / 1.4, Math.PI / 2]}
+         config={{ mass: 2, tension: 500 }}
+         rotation={[0, 0.3, 0]}
+         snap={{ mass: 4, tension: 1500 }}
+         >
+       
 
-              <ambientLight intensity={10} />
-              <spotLight
-                position={[70, 41, 60]}
-                intensity={19}
-                angle={0.29}
-                penumbra={1}
-                shadow-mapSize={[512, 512]}
-                castShadow
-              />
-              <Mvdr position={[15, -.5, -5]} />
-             
-              <Ocean />
-              
-              </PresentationControls>
-            </Suspense>
-          </Canvas>
-          <footer className={styles.footerL}>
-            If you wanna see the live action of the scene, you can visit...
-            <a
-              className={styles.linka}
-              href="https://housedecentraland.herokuapp.com?realm=localhost-stub&renderer-branch=master"
-            >
-              3d World!
-            </a>
-            <div>
-              (Loading the 3d world may take a few moments, only available on Desktop) If you wanna know
-              more about visit....
-              <a
-                className={styles.linka}
-                href="https://decentraland.org/"
-              >
-                Decentraland
-              </a>
-            </div>
-          </footer>
-        </div>
-      </Breakpoint>
+         <ambientLight intensity={10} />
+         <spotLight
+           position={[70, 41, 60]}
+           intensity={19}
+           angle={0.29}
+           penumbra={1}
+           shadow-mapSize={[512, 512]}
+           castShadow
+         />
+         <Mvdr position={[15, -.5, -5]} />
+        
+         <Ocean />
+         <Sky  scale={1000} sunPosition={[500, 150, -1000]} turbidity={0.1} />
+         </PresentationControls>
+       </Suspense>
+     </Canvas>
+    
+ </Breakpoint>
+      </div>
+     
       <Breakpoint small down>
         <div
           style={{

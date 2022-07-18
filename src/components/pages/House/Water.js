@@ -1,7 +1,6 @@
 import * as THREE from 'three'
-import React, { Suspense, useRef, useMemo } from 'react'
-import { Canvas, extend, useThree, useLoader, useFrame } from '@react-three/fiber'
-import { OrbitControls, Sky } from '@react-three/drei'
+import React, { useRef, useMemo } from 'react'
+import {  extend, useThree, useLoader, useFrame } from '@react-three/fiber'
 import { Water } from 'three-stdlib'
 
 extend({ Water })
@@ -24,7 +23,7 @@ export default function Ocean() {
       fog: false,
       format: gl.encoding
     }),
-    [waterNormals]
+    [gl.encoding, waterNormals]
   )
   useFrame((state, delta) => (ref.current.material.uniforms.time.value += delta))
   return <water ref={ref} args={[geom, config]} rotation-x={-Math.PI / 2} />

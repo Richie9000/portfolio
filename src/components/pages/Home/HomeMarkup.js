@@ -4,7 +4,7 @@ import Stars from "./Stars";
 import styles from "./HomeMarkup.module.css";
 import { Breakpoint } from "react-socks";
 
-function Overlay() {
+ function Overlay() {
   return (
     <div  style={{
       position: "absolute",
