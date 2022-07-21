@@ -23,9 +23,10 @@
 .colors {
   display:flex;
   flex-direction:row;
+ 
 }
 
-.colors div {padding:8px;}
+.colors div {padding:8px; margin: "5px"}
 
 .containerST {
     display: flex;
@@ -44,4 +45,8 @@
 .titleC {
     margin: 10px;
     font-size: 20px;
+}
+
+.input{
+    margin: 5px
 }

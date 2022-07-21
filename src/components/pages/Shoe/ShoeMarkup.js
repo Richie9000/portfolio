@@ -23,7 +23,7 @@ const ShoeMarkup = () => {
       <div className={styles.wrapper}>
       <div className={styles.card}>
           <div >
-              <Canvas style={{ width: "35vw", height: "40vh",backgroundColor:"white", borderRadius:"10px"}}>
+              <Canvas style={{ width: "35vw", height: "50vh",backgroundColor:"white", borderRadius:"10px"}}>
               <Suspense fallback={null}>
               <ambientLight intensity={.7} />
               <spotLight intensity={.7} angle={.1} penumbra={1} position={[10,25,10]} castShadow />
@@ -69,10 +69,10 @@ const ShoeMarkup = () => {
         <h1 style={{margin:"20px", top: "14px", fontSize:"15px"}}>Let your client customize your products!</h1>
        
     </div>
-    <div style={{marginLeft: "6px", position: "absolute", top: "30%"}}>
+    <div style={{marginLeft: "15px", position: "absolute", top: "30%"}}>
     <div style={{backgroundColor:"#16094e", borderRadius:"13px", padding:"1rem"}}>
         <div >
-            <Canvas style={{ width: "85vw", backgroundColor:"white"}}>
+            <Canvas style={{ width: "85vw", backgroundColor:"white", height:"40vh"}}>
             <Suspense fallback={null}>
             <ambientLight intensity={.7} />
             <spotLight intensity={.7} angle={.1} penumbra={1} position={[10,25,10]} castShadow />
@@ -88,18 +88,18 @@ const ShoeMarkup = () => {
         <h2>Color chooser</h2>
         <div className='colors'>
              <div>
-                <input onChange={(e) => setMesh(e.target.value)} type="color" id="mesh" name="mesh"
+                <input className={styles.input} onChange={(e) => setMesh(e.target.value)} type="color" id="mesh" name="mesh"
                        value={mesh} />
                 <label for="mesh">Main</label>
               </div>
 
             <div>
-                <input onChange={(e)=> setStripes(e.target.value)} type="color" id="stripes" name="stripes"
+                <input className={styles.input}onChange={(e)=> setStripes(e.target.value)} type="color" id="stripes" name="stripes"
                         value={stripes} />
                 <label for="stripes">Stripes</label>
             </div>
              <div>
-                <input onChange={(e)=>setSole(e.target.value)} type="color" id="sole" name="sole"
+                <input className={styles.input} onChange={(e)=>setSole(e.target.value)} type="color" id="sole" name="sole"
                         value={sole} />
                 <label for="sole">Sole</label>
             </div>

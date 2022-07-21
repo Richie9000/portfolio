@@ -25,8 +25,8 @@ const Navbar = () => {
      }
      
      return(
-       <div ref={closed} className="containerS" style={{ top: 0, height: "100%", width: "100%", backgroundColor:"black", zIndex: "3", position: "absolute"}}>
-         <ul style={{margin: "15px" }} >
+       <div ref={closed} className="containerS" style={{ top: 0, height: "100%", width: "100%", backgroundColor:"black", zIndex: "3", position: "absolute", opacity:"98%"}}>
+         <ul style={{margin: "25px", paddingTop:"20px" }} >
       <Link className="list-group-item" onClick= {() => { setShowNav(false); CloseNav()}} to="/" style={{margin: "15px", backgroundColor: "Transparent", fontSize:"19px", color: "white", opacity: "25%"}}  >Home</Link>
       <Link className="list-group-item" to="/model"  onClick= {() => {setShowNav(false); CloseNav()}} style={{margin: "15px", backgroundColor: "Transparent", fontSize:"19px", color: "white", opacity: "25%"}} >Shoe Model</Link>
       <Link className="list-group-item" to="/house"  onClick= {() => {setShowNav(false); CloseNav(); }} style={{margin: "15px", backgroundColor: "Transparent", fontSize:"19px", color: "white", opacity: "25%"}} >3D House</Link>
