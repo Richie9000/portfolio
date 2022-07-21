@@ -1,50 +1,31 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, PresentationControls, Sky, Html } from "@react-three/drei";
+import { OrbitControls, Sky } from "@react-three/drei";
 import Mvdr from "./Mvdr";
-import { Breakpoint } from "react-socks";
+import { Breakpoint} from "react-socks";
 import Ocean from "./Water";
 import styles from "./HouseMarkup.module.css"
 
 
  const HouseMarkup = () => {
+
   return (
     <div>
-     {/* <div style={{ top: 0, zIndex: "0"}}>
-     <a href="https://housedecentraland.herokuapp.com/ur?realm=localhost-stub&renderer-branch=master">live action</a>
-     </div> */}
-      <div className={styles.container}>
-      <Breakpoint large up >
-     <Canvas
-      style={{ position: 'absolute', top: 0, left: 0, pointerEvents: 'none', width: '100%', height: '100%'  } }
-       camera={{ fov: 70, position: [30, 10, -33] }}
-       
-     >
-       <Suspense fallback={null}>
-
-       
-         
-         <ambientLight intensity={2} />
-         <spotLight
-           position={[70, 41, 60]}
-           intensity={19}
-           angle={0.29}
-           penumbra={1}
-           shadow-mapSize={[512, 512]}
-           castShadow
-         />
-         <Mvdr position={[15, -.2, -1]} />
-        
-         <Ocean />
-         <Sky  scale={1000} sunPosition={[500, 1, -1000]} turbidity={0.1} />
-        
+    
+       <Breakpoint large up>
+      
+     
+     <Canvas style={{position: "absolute", top: 0, left: 0, fov: 70, width:"100%", height:"100%" }}>
        <OrbitControls />
+       <Suspense fallback={null}>
+      <ambientLight intensity={5} />
+    
+       <Mvdr scale={.15} />
+       <Sky scale={1000} sunPosition={[500, 1, -1000]} turbidity={.1} />
        </Suspense>
      </Canvas>
-    
- </Breakpoint>
-      </div>
      
+       </Breakpoint>
       <Breakpoint small down>
         <div
           style={{
@@ -60,7 +41,7 @@ import styles from "./HouseMarkup.module.css"
           </h1>
         </div>
         <div style={{ width: "100%" }}>
-          <Canvas camera={{ fov: 70, position: [28, 0, -20] }}>
+          <Canvas style={{ position: "absolute", top: 0, left: 0, width:"100%", height:"100%"}} camera={{ fov: 70, position: [50, 0, -40] }}>
             <Suspense fallback={null}>
               <ambientLight intensity={5} />
               <spotLight
@@ -71,7 +52,7 @@ import styles from "./HouseMarkup.module.css"
                 shadow-mapSize={[512, 512]}
                 castShadow
               />
-              <Mvdr position={[15, -5, -5]} />
+              <Mvdr scale={.5} position={[15, -5, -5]} />
            
               <OrbitControls />
             </Suspense>
