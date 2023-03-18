@@ -5,8 +5,9 @@ import HomeMarkup from "./components/pages/Home/HomeMarkup";
 import ShoeMarkup from "./components/pages/Shoe/ShoeMarkup";
 import HouseMarkup from "./components/pages/House/HouseMarkup";
 import ContactMarkup from "./components/pages/Contact/ContactMarkup";
-import WatchMarkup from "./components/pages/Watch/WatchMarkup";
+
 import { BreakpointProvider } from "react-socks";
+import { ScrollWindow } from "./components/pages/Scroll/ScrollWindow";
 
 
 
@@ -20,7 +21,7 @@ function App() {
         <Navbar /> 
       <Routes>
         <Route path="/" element={<HomeMarkup />}/> 
-        <Route path="/Watch" element={<WatchMarkup />}/>
+        <Route path="/Scroll" element={<ScrollWindow />}/>
         <Route path="/Model" element={<ShoeMarkup />} />
         <Route path="/House" element={<HouseMarkup />} />
         <Route path="/Contact" element={<ContactMarkup />} />

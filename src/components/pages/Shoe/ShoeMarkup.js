@@ -41,23 +41,23 @@ const ShoeMarkup = () => {
                <div>
                   <input onChange={(e) => setMesh(e.target.value)} type="color" id="mesh" name="mesh"
                          value={mesh} />
-                  <label for="mesh">Main</label>
+                  <label htmlFor="mesh">Main</label>
                 </div>
   
               <div>
                   <input onChange={(e)=> setStripes(e.target.value)} type="color" id="stripes" name="stripes"
                           value={stripes} />
-                  <label for="stripes">Stripes</label>
+                  <label htmlFor="stripes">Stripes</label>
               </div>
                <div>
                   <input onChange={(e)=>setSole(e.target.value)} type="color" id="sole" name="sole"
                           value={sole} />
-                  <label for="sole">Sole</label>
+                  <label htmlFor="sole">Sole</label>
               </div>
                <div>
                   <input onChange={(e)=>setLaces(e.target.value)} type="color" id="laces" name="laces"
                           value={laces} />
-                  <label for="sole">Laces</label>
+                  <label htmlFor="sole">Laces</label>
               </div>
           </div>
       </div>
@@ -90,18 +90,18 @@ const ShoeMarkup = () => {
              <div>
                 <input className={styles.input} onChange={(e) => setMesh(e.target.value)} type="color" id="mesh" name="mesh"
                        value={mesh} />
-                <label for="mesh">Main</label>
+                <label htmlFor="mesh">Main</label>
               </div>
 
             <div>
                 <input className={styles.input}onChange={(e)=> setStripes(e.target.value)} type="color" id="stripes" name="stripes"
                         value={stripes} />
-                <label for="stripes">Stripes</label>
+                <label htmlFor="stripes">Stripes</label>
             </div>
              <div>
                 <input className={styles.input} onChange={(e)=>setSole(e.target.value)} type="color" id="sole" name="sole"
                         value={sole} />
-                <label for="sole">Sole</label>
+                <label htmlFor="sole">Sole</label>
             </div>
         </div>
     </div>

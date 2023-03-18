@@ -30,7 +30,7 @@ const Navbar = () => {
       <Link className="list-group-item" onClick= {() => { setShowNav(false); CloseNav()}} to="/" style={{margin: "15px", backgroundColor: "Transparent", fontSize:"19px", color: "white", opacity: "25%"}}  >Home</Link>
       <Link className="list-group-item" to="/model"  onClick= {() => {setShowNav(false); CloseNav()}} style={{margin: "15px", backgroundColor: "Transparent", fontSize:"19px", color: "white", opacity: "25%"}} >Shoe Model</Link>
       <Link className="list-group-item" to="/house"  onClick= {() => {setShowNav(false); CloseNav(); }} style={{margin: "15px", backgroundColor: "Transparent", fontSize:"19px", color: "white", opacity: "25%"}} >3D House</Link>
-      <Link className="list-group-item" to="/watch"  onClick= {() => {setShowNav(false); CloseNav()}} style={{  margin: "15px", backgroundColor: "Transparent", fontSize:"19px", color: "white", opacity: "25%"}} >Watch</Link>
+      <Link className="list-group-item" to="/scroll"  onClick= {() => {setShowNav(false); CloseNav()}} style={{  margin: "15px", backgroundColor: "Transparent", fontSize:"19px", color: "white", opacity: "25%"}} >Scroll</Link>
       <Link className="list-group-item" to="/contact" onClick= {() => {setShowNav(false); CloseNav()}} style={{margin: "15px", backgroundColor: "Transparent", fontSize:"19px", color: "white", opacity: "25%"}} >Contact</Link>
          </ul>
          <button  className="closebtn" onClick= {() => {setShowNav(false); CloseNav()}} style={{   backgroundColor: "Transparent", backgroundRepeat:"no-repeat",
@@ -51,7 +51,7 @@ const Navbar = () => {
       <Link className="nav-list" to="/" style={{margin: "15px"}}  >Home</Link>
       <Link className="nav-list" to="/model" style={{margin: "15px"}} >Shoe Model</Link>
       <Link className="nav-list" onClick={()=> handleClick()} to="/house" style={{margin: "15px"}} >3D House</Link>
-      <Link className="nav-list" to="/watch" style={{  margin: "15px"}} >Watch</Link>
+      <Link className="nav-list" to="/scroll" style={{  margin: "15px"}} >Scroll</Link>
       <Link className="nav-list" to="/contact" style={{margin: "15px"}} >Contact</Link>
     </ul>
   </div>
