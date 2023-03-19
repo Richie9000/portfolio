@@ -36,7 +36,7 @@ import styles from "./HouseMarkup.module.css"
                 color: "black",
                 opacity: "50%"
               }}
-              href="https://housedecentraland.herokuapp.com?realm=localhost-stub&renderer-branch=master"
+              //href="https://housedecentraland.herokuapp.com?realm=localhost-stub&renderer-branch=master"
             >
              This is an NFT created
              <br/> for Decentraland a virtual 3d World!
