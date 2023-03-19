@@ -49,19 +49,19 @@ function Items() {
 }
 
 export const ScrollWindow = () => (
-  <Canvas style={{height: '100vh' }} orthographic camera={{ zoom: 80 }} gl={{ alpha: false, antialias: false, stencil: false, depth: false }} dpr={[1, 1.5]}>
+  <Canvas style={{height: '100vh', zIndex: '0' }} orthographic camera={{ zoom: 80 }} gl={{ alpha: false, antialias: false, stencil: false, depth: false }} dpr={[1, 1.5]}>
     <color attach="background" args={['#f0f0f0']} />
     <ScrollControls damping={6} pages={5}>
       <Items />
-      <Scroll html style={{ width: '100%',  }}>
-        <h1 style={{ position: 'absolute', top: `100vh`, right: '20vw', fontSize: '25em', transform: `translate3d(0,-100%,0)` }}>Would you like </h1>
-        <h1 style={{ position: 'absolute', top: '180vh', left: '10vw' }}>a web page</h1>
-        <h1 style={{ position: 'absolute', top: '260vh', right: '10vw' }}>like </h1>
-        <h1 style={{ position: 'absolute', top: '350vh', left: '10vw' }}>this one</h1>
-        <h1 style={{ position: 'absolute', top: '450vh', right: '10vw' }}>
-          her
+      <Scroll html style={{ width: '100%',  height: '100vh', zIndex: '0' }}>
+        <h1 style={{ position: 'absolute', top: `50vh`, right: '8vw', fontSize: '5em', backgroundColor: 'black', zIndex: '5'}}>Would you like </h1>
+        <h1 style={{ position: 'absolute', top: '180vh', left: '10vw', fontSize: '5em', backgroundColor: 'black', zIndex: '1' }}>a web page</h1>
+        <h1 style={{ position: 'absolute', top: '260vh', right: '10vw',fontSize: '5em',  backgroundColor: 'black', zIndex: '1' }}>like </h1>
+        <h1 style={{ position: 'absolute', top: '350vh', left: '10vw', fontSize: '5em', backgroundColor: 'black', zIndex: '1' }}>this one</h1>
+        <h1 style={{ position: 'absolute', top: '450vh', right: '10vw', fontSize: '5em', backgroundColor: 'black', zIndex: '1' }}>
+          Contact
           <br />
-          mes.
+          me!
         </h1>
       </Scroll>
     </ScrollControls>

@@ -7,3 +7,12 @@
     height: 100%;
     overflow: hidden;
 }
+
+.line {
+    color: black;
+    background-color:black;
+    position: 'absolute'; 
+    top: '260vh';
+    left: '10vw'; 
+}
+
